@@ -1,0 +1,66 @@
+Started by upstream project "A" build number 1
+originally caused by:
+ Started by user Viswateja
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /Users/mac/.jenkins/workspace/B
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential a532d309-1f4b-4842-8966-31e574c6f597
+Cloning the remote Git repository
+Cloning repository https://github.com/viswateja5/teja.git
+ > /usr/bin/git init /Users/mac/.jenkins/workspace/B # timeout=10
+Fetching upstream changes from https://github.com/viswateja5/teja.git
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.39.5 (Apple Git-154)'
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --force --progress -- https://github.com/viswateja5/teja.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/viswateja5/teja.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > /usr/bin/git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision c67a22b0d3fa12a7b90549bf50fe5dc5019475d8 (refs/remotes/origin/main)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f c67a22b0d3fa12a7b90549bf50fe5dc5019475d8 # timeout=10
+Commit message: "Create j.py"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] git
+The recommended git tool is: NONE
+using credential a532d309-1f4b-4842-8966-31e574c6f597
+ > /usr/bin/git rev-parse --resolve-git-dir /Users/mac/.jenkins/workspace/B/.git # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/viswateja5/teja.git # timeout=10
+Fetching upstream changes from https://github.com/viswateja5/teja.git
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.39.5 (Apple Git-154)'
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --force --progress -- https://github.com/viswateja5/teja.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision c67a22b0d3fa12a7b90549bf50fe5dc5019475d8 (refs/remotes/origin/main)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f c67a22b0d3fa12a7b90549bf50fe5dc5019475d8 # timeout=10
+ > /usr/bin/git branch -a -v --no-abbrev # timeout=10
+ > /usr/bin/git checkout -b main c67a22b0d3fa12a7b90549bf50fe5dc5019475d8 # timeout=10
+Commit message: "Create j.py"
+[Pipeline] sh
++ python3 j.py
+{'t': 1, 'j': 1, 'e': 1, 'V': 1, 's': 1, 'i': 1, 'w': 1, 'a': 2}
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] echo
+Testing is done
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
